@@ -14,6 +14,8 @@ public class ArrayTask {
         int number2 = furkan.nextInt() ;
         int[] array = composeArray(number2);
         display();
+        getDPart(array) ;
+    
 
 
     }
@@ -28,6 +30,33 @@ public class ArrayTask {
     }
     return yagiz ;
     }
+    public int minfinder(int[] minfindersarray)
+{
+    int min=101;
+    for(int i=0;i<minfindersarray.length;i++)
+    {
+        if(min>minfindersarray[i])
+        {
+            min=minfindersarray[i];
+        }
+    }
+return min;
+}
+
+
+public int maxfinder(int[] maxfindersarray)
+{
+
+int max=-1;
+    for(int i=0;i<maxfindersarray.length;i++)
+    {
+        if(max<maxfindersarray[i])
+        {
+            max=maxfindersarray[i];
+        }
+    }
+return max;
+} 
 
     public static void display(){
         Scanner in = new Scanner(System.in);
@@ -94,3 +123,32 @@ public class ArrayTask {
         return result;
     }
     }
+
+
+    public static void getDPart(int[] array){
+        // variables for D part
+        int average =  0 ;
+        int total = 0;
+        String show = "";
+        int differences = 0;
+
+        //finding sum of numbers
+        for(int i = 0 ; i < array.length ; i++){
+            total += array[i]; 
+        }
+
+        //finding average
+        average = total / array.length;
+        
+        //finding differences
+        for(int i = 0; i < array.length ; i++){
+            differences = 0;
+            differences = array[i] - average;
+            show += differences + " "; 
+        }
+        //outputs
+        System.out.println(show);
+    }
+    
+
+}
