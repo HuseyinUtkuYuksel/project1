@@ -12,8 +12,8 @@ public class ArrayTask {
         Scanner furkan = new Scanner(System.in);
         System.out.print("Enter number ");
         int number2 = furkan.nextInt() ;
-        composeArray(number2);
-        
+        int[] array = composeArray(number2);
+
 
     }
 
