@@ -13,8 +13,7 @@ public class ArrayTask {
         System.out.print("Enter number ");
         int number2 = furkan.nextInt() ;
         int[] array = composeArray(number2);
-        display();
-        getDPart(array) ;
+        display(array);
     
 
 
@@ -30,7 +29,7 @@ public class ArrayTask {
     }
     return yagiz ;
     }
-    public int minfinder(int[] minfindersarray)
+    public static int minfinder(int[] minfindersarray)
 {
     int min=101;
     for(int i=0;i<minfindersarray.length;i++)
@@ -44,7 +43,7 @@ return min;
 }
 
 
-public int maxfinder(int[] maxfindersarray)
+public static int maxfinder(int[] maxfindersarray)
 {
 
 int max=-1;
@@ -58,7 +57,7 @@ int max=-1;
 return max;
 } 
 
-    public static void display(){
+    public static void display(int[] array){
         Scanner in = new Scanner(System.in);
 
         boolean flag=true;
@@ -76,15 +75,16 @@ return max;
             int number = in.nextInt();
 
                 if(number==1){
-
+                    maxfinder(array) ;
+                    minfinder(array) ;
                 }
 
                 if(number==2){
-
+                    getDPartav(array) ;
                 }
 
                 if(number==3){
-
+                    getDPart(array);
                 }
 
                 if(number==4){
@@ -103,6 +103,7 @@ return max;
         in.close();
     }
 
+<<<<<<< Updated upstream
     public static int oddSums(int[] array)
     {
         int result = 0;
@@ -123,6 +124,10 @@ return max;
         return result;
     }
     }
+=======
+    
+    
+>>>>>>> Stashed changes
 
 
     public static void getDPart(int[] array){
@@ -148,7 +153,33 @@ return max;
         }
         //outputs
         System.out.println(show);
+        
+    }
+    public static int getDPartav(int[] array){
+        // variables for D part
+        int average =  0 ;
+        int total = 0;
+        String show = "";
+        int differences = 0;
+
+        //finding sum of numbers
+        for(int i = 0 ; i < array.length ; i++){
+            total += array[i]; 
+        }
+
+        //finding average
+        average = total / array.length;
+        
+        //finding differences
+        for(int i = 0; i < array.length ; i++){
+            differences = 0;
+            differences = array[i] - average;
+            show += differences + " "; 
+        }
+        //outputs
+        
+        return average ;
     }
     
-
 }
+
