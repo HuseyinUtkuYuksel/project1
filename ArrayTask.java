@@ -27,4 +27,51 @@ public class ArrayTask {
     }
     return yagiz ;
     }
+
+    public static void display(){
+        Scanner in = new Scanner(System.in);
+
+        boolean flag=true;
+
+        while(flag==false)
+        {
+            System.out.println("Menu Options:");
+            System.out.println("1) Find Min and Max of the List: ");
+            System.out.println("2) Find the Average of the List: ");
+            System.out.println("3) Display Diffrences From the Average:");
+            System.out.println("4) Find the Sum of Odd Numbers");
+            System.out.println("5) Find the sum of Even Numbers");
+            System.out.println("6) Exit");
+            System.out.print("Your choice:");
+            int number = in.nextInt();
+
+                if(number==1){
+
+                }
+
+                if(number==2){
+
+                }
+
+                if(number==3){
+
+                }
+
+                if(number==4){
+
+                }
+
+                if(number==5){
+
+                }
+
+                if(number==6){
+                    flag=false;
+                }
+    
+        }
+        in.close();
+    }
+
+    }
 }
