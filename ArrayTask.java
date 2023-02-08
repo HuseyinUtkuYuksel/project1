@@ -14,6 +14,8 @@ public class ArrayTask {
         int number2 = furkan.nextInt() ;
         int[] array = composeArray(number2);
         display();
+        getDPart(array) ;
+    
 
 
     }
@@ -75,3 +77,32 @@ public class ArrayTask {
     }
 
     }
+
+
+    public static void getDPart(int[] array){
+        // variables for D part
+        int average =  0 ;
+        int total = 0;
+        String show = "";
+        int differences = 0;
+
+        //finding sum of numbers
+        for(int i = 0 ; i < array.length ; i++){
+            total += array[i]; 
+        }
+
+        //finding average
+        average = total / array.length;
+        
+        //finding differences
+        for(int i = 0; i < array.length ; i++){
+            differences = 0;
+            differences = array[i] - average;
+            show += differences + " "; 
+        }
+        //outputs
+        System.out.println(show);
+    }
+    
+
+}
