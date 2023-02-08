@@ -13,6 +13,14 @@ public class ArrayTask {
         System.out.print("Enter number ");
         int number2 = furkan.nextInt() ;
         int[] array = composeArray(number2);
+        
+        for(int i : array)
+        {
+            System.out.print(i+"\t");
+        }
+        System.out.println();
+
+
         display(array);
     
 
@@ -58,11 +66,13 @@ return max;
 } 
 
     public static void display(int[] array){
+        
         Scanner in = new Scanner(System.in);
+
 
         boolean flag=true;
 
-        while(flag==false)
+        while(flag)
         {
             System.out.println("Menu Options:");
             System.out.println("1) Find Min and Max of the List: ");
@@ -75,24 +85,24 @@ return max;
             int number = in.nextInt();
 
                 if(number==1){
-                    maxfinder(array) ;
-                    minfinder(array) ;
+                 System.out.println(maxfinder(array) );  
+                  System.out.println(minfinder(array));  
                 }
 
                 if(number==2){
-                    getDPartav(array) ;
+                 System.out.println(getDPartav(array) );
                 }
 
                 if(number==3){
-                    getDPart(array);
+                getDPart(array);
                 }
 
                 if(number==4){
-                    
+                 System.out.println(oddSums(array));   
                 }
 
                 if(number==5){
-
+                   System.out.println( evenSums(array));
                 }
 
                 if(number==6){
@@ -103,7 +113,7 @@ return max;
         in.close();
     }
 
-<<<<<<< Updated upstream
+
     public static int oddSums(int[] array)
     {
         int result = 0;
@@ -123,11 +133,8 @@ return max;
         }
         return result;
     }
-    }
-=======
     
-    
->>>>>>> Stashed changes
+
 
 
     public static void getDPart(int[] array){
