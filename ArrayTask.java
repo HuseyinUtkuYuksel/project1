@@ -59,7 +59,7 @@ public class ArrayTask {
                 }
 
                 if(number==4){
-
+                    
                 }
 
                 if(number==5){
@@ -74,4 +74,23 @@ public class ArrayTask {
         in.close();
     }
 
+    public static int oddSums(int[] array)
+    {
+        int result = 0;
+        for(int i = 1; i < array.length; i +=2)
+        {
+            result += array[i];
+        }
+        return result;
+    }
+
+    public static int evenSums(int[] array)
+    {
+        int result = 0;
+        for(int i = 0; i < array.length; i +=2)
+        {
+            result += array[i];
+        }
+        return result;
+    }
     }
