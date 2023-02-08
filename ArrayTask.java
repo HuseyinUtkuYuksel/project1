@@ -13,6 +13,7 @@ public class ArrayTask {
         System.out.print("Enter number ");
         int number2 = furkan.nextInt() ;
         int[] array = composeArray(number2);
+        display();
 
 
     }
