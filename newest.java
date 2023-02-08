@@ -1,18 +1,31 @@
 package project1;
+import java.net.Socket;
+import java.util.Random;
+import java.util.Scanner;
 
+/**
+ * ArrayTask
+ */
+public class ArrayTask {
 
-public class newest {
 
     public static void main(String[] args) {
-        
-        int array[]={10,20,30,40};
-
-        maxminclass newMaxminclass = new maxminclass();
-       System.out.println(newMaxminclass.maxfinder(array)); 
-       System.out.println(newMaxminclass.minfinder(array)); 
-
+        Scanner furkan = new Scanner(System.in);
+        System.out.print("Enter number ");
+        int number2 = furkan.nextInt() ;
+        int[] array = composeArray(number2);
 
 
     }
-    
+
+    public static int[] composeArray(int length){
+
+    Random rand = new Random() ;
+    int[] yagiz = new int[length] ;
+    for(int i =0 ; i < yagiz.length ; i++){
+        int number = rand.nextInt(101) ;
+        yagiz[i] = number ;
+    }
+    return yagiz ;
+    }
 }
